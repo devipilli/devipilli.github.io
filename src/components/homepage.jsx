@@ -8,7 +8,11 @@ import {
   Col,
   Card,
   Typography,
+  Space,
+  Select,
 } from "antd";
+import moment from "moment";
+
 import { PhoneOutlined, CalendarOutlined } from "@ant-design/icons";
 
 const { Meta } = Card;
@@ -25,6 +29,58 @@ const Homepage = () => {
       `Appointment booked for ${values.name} on ${values.date.format(
         "YYYY-MM-DD"
       )} at ${values.time}`
+    );
+  };
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState("");
+
+  // Available time slots (you can modify based on your requirements)
+  const availableTimeSlots = {
+    "2025-02-07": [
+      "8:00 AM",
+      "8:30 AM",
+      "9:00 AM",
+      "9:30 AM",
+      "10:00 AM",
+      "10:30 AM",
+      "11:00 AM",
+      "11:30 AM",
+      "12:00 PM",
+      "12:30 PM",
+      "1:00 PM",
+      "1:30 PM",
+      "2:00 PM",
+      "2:30 PM",
+      "3:00 PM",
+      "3:30 PM",
+      "4:00 PM",
+    ],
+    "2025-02-10": [
+      "9:00 AM",
+      "9:30 AM",
+      "10:00 AM",
+      "10:30 AM",
+      "11:00 AM",
+      "11:30 AM",
+      "12:00 PM",
+      "12:30 PM",
+    ],
+  };
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+    setSelectedTime(""); // Clear the selected time when date changes
+  };
+
+  const handleTimeSelect = (time) => {
+    setSelectedTime(time);
+  };
+
+  const handleBooking = () => {
+    alert(
+      `Appointment booked for ${selectedDate.format(
+        "YYYY-MM-DD"
+      )} at ${selectedTime}`
     );
   };
 
@@ -71,49 +127,72 @@ const Homepage = () => {
 
         {/* Contact Information */}
         <Col xs={24} sm={24} md={14} lg={10}>
-          <Card title="Book Your Appointment">
-            <Form
-              form={form}
-              name="appointmentForm"
-              onFinish={onFinish}
-              initialValues={{ remember: true }}
-              layout="vertical"
-            >
-              <Form.Item
-                label="Full Name"
-                name="name"
-                rules={[{ required: true, message: "Please input your name!" }]}
-              >
-                <Input placeholder="Enter your full name" />
-              </Form.Item>
+          {/* Book Your Appointment Card */}
+          {/* <Card title="Book Your Appointment"> */}
+          {/* <Space direction="vertical" style={{ width: "100%" }}> */}
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/pillidevi787?hide_landing_page_details=1&hide_gdpr_banner=1"
+            style={{ minWidth: "320px", height: "700px" }}
+          ></div>
+          <script
+            type="text/javascript"
+            src="https://assets.calendly.com/assets/external/widget.js"
+            async
+          ></script>
 
-              <Form.Item
-                label="Date of Appointment"
-                name="date"
-                rules={[{ required: true, message: "Please select a date!" }]}
-              >
-                <DatePicker style={{ width: "100%" }} />
-              </Form.Item>
+          {/* <div
+                class="calendly-inline-widget"
+                data-url="https://calendly.com/pillidevi787"
+                style={{ minWidth: "320px", height: "700px" }}
+              ></div>
+              <script
+                type="text/javascript"
+                src="https://assets.calendly.com/assets/external/widget.js"
+                async
+              ></script> */}
+          {/* <!-- Calendly inline widget end --> */}
+          {/* Date Selection */}
+          {/* <DatePicker
+                onChange={handleDateChange}
+                disabledDate={(current) =>
+                  current && current < moment().startOf("day")
+                }
+                style={{ width: "100%" }}
+                placeholder="Select a date"
+              />
 
-              <Form.Item
-                label="Time"
-                name="time"
-                rules={[{ required: true, message: "Please select a time!" }]}
-              >
-                <Input placeholder="Enter preferred time (e.g., 10:00 AM)" />
-              </Form.Item>
+               {selectedDate && (
+                <Space direction="vertical" style={{ width: "100%" }}>
+                  <Title level={5}>Available Time Slots:</Title>
+                  <Row gutter={[8, 8]} style={{ marginBottom: "16px" }}>
+                    {availableTimeSlots[selectedDate.format("YYYY-MM-DD")]?.map(
+                      (time) => (
+                        <Col span={8} key={time}>
+                          <Button
+                            type={selectedTime === time ? "primary" : "default"}
+                            style={{ width: "100%" }}
+                            onClick={() => handleTimeSelect(time)}
+                          >
+                            {time}
+                          </Button>
+                        </Col>
+                      )
+                    )}
+                  </Row>
+                </Space>
+              )}
 
-              <Form.Item>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  style={{ width: "100%" }}
-                >
-                  Book Appointment
-                </Button>
-              </Form.Item>
-            </Form>
-          </Card>
+               <Button
+                type="primary"
+                onClick={handleBooking}
+                disabled={!selectedDate || !selectedTime}
+                style={{ width: "100%" }}
+              >
+                Book Appointment
+              </Button> */}
+          {/* </Space>
+          </Card> */}
         </Col>
       </Row>
 
