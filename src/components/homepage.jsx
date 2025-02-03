@@ -14,6 +14,7 @@ import {
 import moment from "moment";
 
 import { PhoneOutlined, CalendarOutlined } from "@ant-design/icons";
+import ContactForm from "./contactForm";
 
 const { Meta } = Card;
 const { Title, Paragraph } = Typography;
@@ -197,7 +198,7 @@ const Homepage = () => {
       </Row>
 
       {/* Confirmation Display */}
-      {appointment && (
+      {/* {appointment && (
         <Row justify="center" style={{ marginTop: "30px" }}>
           <Col span={24} md={12}>
             <Card title="Appointment Confirmation">
@@ -213,7 +214,9 @@ const Homepage = () => {
             </Card>
           </Col>
         </Row>
-      )}
+      )} */}
+
+      <ContactForm />
     </div>
   );
 };
