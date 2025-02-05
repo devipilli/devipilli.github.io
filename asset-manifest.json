@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.393d7d43.css",
-    "main.js": "/static/js/main.b6bf65a0.js",
+    "main.js": "/static/js/main.51903f47.js",
     "static/js/453.b5e9b3e6.chunk.js": "/static/js/453.b5e9b3e6.chunk.js",
+    "static/media/devi_nagini_pilli_profile_photo.jpeg": "/static/media/devi_nagini_pilli_profile_photo.4dfe28d5d833d34030be.jpeg",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.393d7d43.css.map": "/static/css/main.393d7d43.css.map",
-    "main.b6bf65a0.js.map": "/static/js/main.b6bf65a0.js.map",
+    "main.51903f47.js.map": "/static/js/main.51903f47.js.map",
     "453.b5e9b3e6.chunk.js.map": "/static/js/453.b5e9b3e6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.393d7d43.css",
-    "static/js/main.b6bf65a0.js"
+    "static/js/main.51903f47.js"
   ]
 }
