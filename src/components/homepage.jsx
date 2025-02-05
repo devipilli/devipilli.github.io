@@ -1,20 +1,8 @@
+import { Card, Col, Form, Row, Typography } from "antd";
 import React, { useState } from "react";
-import {
-  Button,
-  DatePicker,
-  Form,
-  Input,
-  Row,
-  Col,
-  Card,
-  Typography,
-  Space,
-  Select,
-} from "antd";
-import moment from "moment";
-
-import { PhoneOutlined, CalendarOutlined } from "@ant-design/icons";
+import { PhoneOutlined } from "@ant-design/icons";
 import ContactForm from "./contactForm";
+import devi_nagini_pilli_profile_photo from "./devi_nagini_pilli_profile_photo.jpeg";
 
 const { Meta } = Card;
 const { Title, Paragraph } = Typography;
@@ -104,12 +92,7 @@ const Homepage = () => {
               maxWidth: "240px",
               margin: "0 auto",
             }}
-            cover={
-              <img
-                alt="example"
-                src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-              />
-            }
+            cover={<img alt="example" src={devi_nagini_pilli_profile_photo} />}
           >
             <Meta title="Dr. Devi Nagini Pilli" description="Physiotherapist" />
 
@@ -117,106 +100,20 @@ const Homepage = () => {
               {/* Contact Information inside Profile Card */}
               <Paragraph>
                 <PhoneOutlined /> Phone:{" "}
-                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                <a href="tel:+919967711964">+91 9967711964</a>
               </Paragraph>
               <Paragraph>
-                <PhoneOutlined /> 123 Physiotherapy Street, Health City, Country
+                <PhoneOutlined /> 104/B, 14th Rd, TPS III, Bandra West, Mumbai,
+                Maharashtra 400050, India
               </Paragraph>
             </div>
           </Card>
         </Col>
 
-        {/* Contact Information */}
         <Col xs={24} sm={24} md={14} lg={10}>
-          {/* Book Your Appointment Card */}
-          {/* <Card title="Book Your Appointment"> */}
-          {/* <Space direction="vertical" style={{ width: "100%" }}> */}
-          <div
-            class="calendly-inline-widget"
-            data-url="https://calendly.com/pillidevi787?hide_landing_page_details=1&hide_gdpr_banner=1"
-            style={{ minWidth: "320px", height: "700px" }}
-          ></div>
-          <script
-            type="text/javascript"
-            src="https://assets.calendly.com/assets/external/widget.js"
-            async
-          ></script>
-
-          {/* <div
-                class="calendly-inline-widget"
-                data-url="https://calendly.com/pillidevi787"
-                style={{ minWidth: "320px", height: "700px" }}
-              ></div>
-              <script
-                type="text/javascript"
-                src="https://assets.calendly.com/assets/external/widget.js"
-                async
-              ></script> */}
-          {/* <!-- Calendly inline widget end --> */}
-          {/* Date Selection */}
-          {/* <DatePicker
-                onChange={handleDateChange}
-                disabledDate={(current) =>
-                  current && current < moment().startOf("day")
-                }
-                style={{ width: "100%" }}
-                placeholder="Select a date"
-              />
-
-               {selectedDate && (
-                <Space direction="vertical" style={{ width: "100%" }}>
-                  <Title level={5}>Available Time Slots:</Title>
-                  <Row gutter={[8, 8]} style={{ marginBottom: "16px" }}>
-                    {availableTimeSlots[selectedDate.format("YYYY-MM-DD")]?.map(
-                      (time) => (
-                        <Col span={8} key={time}>
-                          <Button
-                            type={selectedTime === time ? "primary" : "default"}
-                            style={{ width: "100%" }}
-                            onClick={() => handleTimeSelect(time)}
-                          >
-                            {time}
-                          </Button>
-                        </Col>
-                      )
-                    )}
-                  </Row>
-                </Space>
-              )}
-
-               <Button
-                type="primary"
-                onClick={handleBooking}
-                disabled={!selectedDate || !selectedTime}
-                style={{ width: "100%" }}
-              >
-                Book Appointment
-              </Button> */}
-          {/* </Space>
-          </Card> */}
+          <ContactForm />
         </Col>
       </Row>
-
-      {/* Confirmation Display */}
-      {/* {appointment && (
-        <Row justify="center" style={{ marginTop: "30px" }}>
-          <Col span={24} md={12}>
-            <Card title="Appointment Confirmation">
-              <p>
-                <strong>Name:</strong> {appointment.name}
-              </p>
-              <p>
-                <strong>Date:</strong> {appointment.date.format("YYYY-MM-DD")}
-              </p>
-              <p>
-                <strong>Time:</strong> {appointment.time}
-              </p>
-            </Card>
-          </Col>
-        </Row>
-      )} */}
-
-      <ContactForm />
     </div>
   );
 };
