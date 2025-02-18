@@ -10,6 +10,10 @@ import mock08 from "../assets/images/mock08.png";
 import mock09 from "../assets/images/mock09.png";
 import mock10 from "../assets/images/mock10.png";
 import "../assets/styles/Project.scss";
+import img1 from "./images/mahakumb.webp";
+import img2 from "./images/type2diabetes.webp";
+import img3 from "./images/neuro.webp";
+import img4 from "./images/sipcon.webp";
 
 function Project() {
   return (
@@ -19,36 +23,73 @@ function Project() {
       <div className="projects-grid">
         <div className="project">
           <a
+            href="https://www.researchgate.net/profile/Devi-Nagini-Pilli"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={img1} className="zoom" alt="thumbnail" width="100%" />
+          </a>
+          <a
+            href="https://www.researchgate.net/profile/Devi-Nagini-Pilli"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h2>
+              Exploration of Physical Fitness Attributes and Kinanthropometric
+              Measurements in Mallakhamb Players
+            </h2>
+          </a>
+          <p>
+            Mallakhamb, an ancient gravity-defying sport, integrates yoga,
+            gymnastics, and martial arts. This study examines the physical
+            fitness attributes and kinanthropometric measurements of 41 elite
+            and sub-elite Mallakhamb players (18–40 years). Results indicate
+            differences in strength, endurance, and flexibility between male and
+            female athletes. Understanding these attributes aids
+            physiotherapists in designing evidence-based training programs for
+            injury prevention and performance enhancement.
+          </p>
+        </div>
+        <div className="project">
+          <a
             href="https://yujisatojr.itch.io/spacecraft"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={mock08} className="zoom" alt="thumbnail" width="100%" />
+            <img src={img4} className="zoom" alt="thumbnail" width="100%" />
           </a>
           <a
             href="https://yujisatojr.itch.io/spacecraft"
             target="_blank"
             rel="noreferrer"
           >
-            <h2>SIPCON</h2>
+            <h2>SIPCON - Best Paper Award for Mallakhamb Research</h2>
           </a>
           <p>
-            Presented a paper on topic - exploration of physical fitness
-            attributes and kinanthropometric measurements in Mallakhamb players
-            and have been awarded as M G Mokashi Best Paper Award Junior
-            Category in 8th SIPCON, Chandigarh.
+            Presented a research paper on physical fitness attributes and
+            kinanthropometric measurements in Mallakhamb players at the 8th
+            SIPCON, Chandigarh. Awarded the M G Mokashi Best Paper Award (Junior
+            Category) for outstanding research contributions, emphasizing the
+            significance of tailored training and injury prevention strategies
+            for Mallakhamb athletes.
           </p>
         </div>
         <div className="project">
           <a href="https://www.filmate.club/" target="_blank" rel="noreferrer">
-            <img src={mock10} className="zoom" alt="thumbnail" width="100%" />
+            <img src={img2} className="zoom" alt="thumbnail" width="100%" />
           </a>
           <a href="https://www.filmate.club/" target="_blank" rel="noreferrer">
-            <h2>COMBAT FAITIGUE AMONG TYPE2 DIABETIC STUDY</h2>
+            <h2>
+              Combatting Fatigue in Type 2 Diabetes: Exercise Awareness Study
+            </h2>
           </a>
           <p>
-            A STUDY ON - AWARENESS OF EXERCISE BENEFITS TO COMBAT FATIGUE AMONG
-            TYPE 2 DIABETIC POPULATION
+            This study explores the awareness of exercise benefits in reducing
+            fatigue among individuals with Type 2 diabetes. Regular physical
+            activity improves energy levels, metabolism, and overall well-being.
+            Findings highlight the need for targeted education programs to
+            enhance exercise adherence, promoting better fatigue management and
+            improved quality of life in diabetic patients.
           </p>
         </div>
         <div className="project">
@@ -65,12 +106,18 @@ function Project() {
             rel="noreferrer"
           >
             <h2>
-              Exploration of physical fitness attributes and kinanthropometric
-              measurements in Mallakhamb players
+              Exploration of Physical Fitness Attributes and Injury Prevalence
+              in Mallakhamb Players
             </h2>
           </a>
           <p>
-            Prevalence of injuries in state level adult pole Mallakhamb players.
+            This study examines the physical fitness attributes,
+            kinanthropometric measurements, and injury prevalence among
+            state-level adult Pole Mallakhamb players. Findings reveal
+            gender-based variations in strength, agility, and endurance,
+            highlighting common injuries due to biomechanical stress. Insights
+            from this research aid in developing targeted training and injury
+            prevention strategies for improved athletic performance.{" "}
           </p>
         </div>
 
@@ -88,26 +135,35 @@ function Project() {
             rel="noreferrer"
           >
             <h2>
-              Participated in 2 days International conference on “EYAN-2018”
-              Recent updates in physiotherapy.
+              Participation in EYAN-2018 International Conference on
+              Physiotherapy
             </h2>
           </a>
           <p>
-            This is an online educational platform that provides high-quality,
-            data science-focused learning resources in the Japanese language. I
-            created the entire platform from scratch using Ruby on Rails.
+            Attended the two-day EYAN-2018 International Conference on recent
+            advancements in physiotherapy. The event provided valuable insights
+            into cutting-edge rehabilitation techniques, evidence-based
+            practices, and emerging trends in physiotherapy, enhancing clinical
+            knowledge and application. Participation fostered professional
+            growth and contributed to a deeper understanding of innovative
+            therapeutic approaches in patient care.
           </p>
         </div>
         <div className="project">
           <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer">
-            <img src={mock06} className="zoom" alt="thumbnail" width="100%" />
+            <img src={img3} className="zoom" alt="thumbnail" width="100%" />
           </a>
           <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer">
-            <h2>Neuro physiotherapy</h2>
+            <h2>Advancements in Neuro Physiotherapy</h2>
           </a>
           <p>
-            Participated in a national conference on “Recent updates in Neuro
-            physiotherapy” conducted by SRM college of physiotherapy.
+            Attended the National Conference on Recent Updates in Neuro
+            Physiotherapy at SRM College of Physiotherapy. The event provided
+            insights into innovative neurorehabilitation techniques, emerging
+            treatments, and evidence-based practices, enhancing expertise in
+            managing neurological disorders. Participation strengthened clinical
+            knowledge for improving patient outcomes in neuro physiotherapy and
+            rehabilitation.
           </p>
         </div>
         <div className="project">
@@ -123,13 +179,16 @@ function Project() {
             target="_blank"
             rel="noreferrer"
           >
-            <h2>Kinesiotaping</h2>
+            <h2>Kinesiotaping for Injury Management and Rehabilitation</h2>
           </a>
           <p>
-            Built official charts for COVID/vaccination tracking for an
-            educational institution using JavaScript and the Google Sheets API
-            v4. The dashboard served the university's leadership in their
-            decision-making processes.
+            Trained in Kinesiotaping, an advanced therapeutic technique used to
+            support muscles, reduce pain, and enhance circulation without
+            restricting movement. This method aids in injury recovery, joint
+            stability, and athletic performance by facilitating proper
+            biomechanics. Widely applied in sports physiotherapy, it helps
+            manage musculoskeletal conditions and improve functional movement
+            patterns.
           </p>
         </div>
         <div className="project">
@@ -145,13 +204,15 @@ function Project() {
             target="_blank"
             rel="noreferrer"
           >
-            <h2>Dry Needling</h2>
+            <h2>Dry Needling for Pain Management and Muscle Rehabilitation</h2>
           </a>
           <p>
-            Analyzed the real estate market in Japan and predicted property
-            prices by implementing statistical methods such as OLS and
-            multi-regression analysis. This project leveraged Python and various
-            libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.
+            Completed training in Dry Needling, a specialized technique for
+            treating musculoskeletal pain and dysfunction. This approach targets
+            myofascial trigger points using fine needles to relieve pain,
+            improve mobility, and enhance muscle function. The technique is
+            widely used in physiotherapy for managing chronic pain, sports
+            injuries, and neuromuscular conditions.
           </p>
         </div>
         <div className="project">
@@ -167,16 +228,15 @@ function Project() {
             target="_blank"
             rel="noreferrer"
           >
-            <h2>
-              Participated in “workshop on wheelchair service training for
-              health care providers –WHO guidelines “conducted by SRM College of
-              physiotherapy.
-            </h2>
+            <h2>Wheelchair Service Training Workshop – WHO Guidelines</h2>
           </a>
           <p>
-            Designed and developed a custom component for a CMS-based platform
-            (e.g., 'Brightspot') using Java, Handlebars, and LESS. University
-            students can find their majors of interest through this module.
+            Successfully participated in the Workshop on Wheelchair Service
+            Training for Healthcare Providers, conducted by SRM College of
+            Physiotherapy following WHO guidelines. The training focused on
+            wheelchair assessment, prescription, and proper fitting techniques,
+            enhancing skills in mobility aid management and improving
+            accessibility for individuals with physical disabilities.
           </p>
         </div>
         <div className="project">
@@ -192,16 +252,15 @@ function Project() {
             target="_blank"
             rel="noreferrer"
           >
-            <h2>
-              Participated and successfully completed the “Trigger point therapy
-              for myofascial pain”- level 1 course conducted by synergy physio
-              care and rehab center Chennai.
-            </h2>
+            <h2>Trigger Point Therapy for Myofascial Pain – Level 1</h2>
           </a>
           <p>
-            Created an interactive CSV table generator with Java, Handlebars,
-            and LESS. This project helps transfer students to quickly identify
-            eligible credits.
+            Successfully completed the Level 1 Trigger Point Therapy for
+            Myofascial Pain course, conducted by Synergy Physio Care and Rehab
+            Center, Chennai. This training enhanced skills in identifying and
+            treating myofascial trigger points, improving pain management,
+            muscle function, and rehabilitation strategies for patients with
+            chronic musculoskeletal conditions.
           </p>
         </div>
         <div className="project">
@@ -218,14 +277,18 @@ function Project() {
             rel="noreferrer"
           >
             <h2>
-              Participated in an industrial visit\workshop conducted by techno
-              med electronics and witnessed the process of manufacturing,
-              testing and calibrations of electrotherapy equipment.
+              Industrial Workshop on Electrotherapy Equipment – Techno Med
+              Electronics
             </h2>
           </a>
           <p>
-            Developed and released an Android mobile application using Java and
-            Android Studio that runs a 2D shooting game.
+            Participated in an industrial visit and workshop conducted by Techno
+            Med Electronics, gaining hands-on experience in the manufacturing,
+            testing, and calibration of electrotherapy equipment. This workshop
+            provided valuable insights into the technological advancements in
+            physiotherapy devices, enhancing knowledge of equipment
+            functionality, quality control, and clinical application in
+            rehabilitation therapy.
           </p>
         </div>
       </div>
