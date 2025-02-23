@@ -92,34 +92,6 @@ function Project() {
             improved quality of life in diabetic patients.
           </p>
         </div>
-        <div className="project">
-          <a
-            href="https://yujisatojr.itch.io/highspeedchase"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={mock09} className="zoom" alt="thumbnail" width="100%" />
-          </a>
-          <a
-            href="https://yujisatojr.itch.io/highspeedchase"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <h2>
-              Exploration of Physical Fitness Attributes and Injury Prevalence
-              in Mallakhamb Players
-            </h2>
-          </a>
-          <p>
-            This study examines the physical fitness attributes,
-            kinanthropometric measurements, and injury prevalence among
-            state-level adult Pole Mallakhamb players. Findings reveal
-            gender-based variations in strength, agility, and endurance,
-            highlighting common injuries due to biomechanical stress. Insights
-            from this research aid in developing targeted training and injury
-            prevention strategies for improved athletic performance.{" "}
-          </p>
-        </div>
 
         <div className="project">
           <a
