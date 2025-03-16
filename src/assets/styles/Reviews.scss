@@ -1,0 +1,225 @@
+.reviews-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  margin: 2rem 0;
+  overflow: hidden;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+}
+
+.reviews-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 2;
+
+  &:hover {
+    background: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &.prev {
+    left: 0;
+  }
+
+  &.next {
+    right: 0;
+  }
+
+  svg {
+    font-size: 1.2rem;
+    color: #555;
+  }
+}
+
+.review-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.reviewer-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: 4px solid white;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .default-avatar {
+    width: 100%;
+    height: 100%;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      font-size: 3rem;
+      color: #999;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.review-content {
+  .stars-container {
+    margin-bottom: 1rem;
+    color: #ffd700;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+
+    .star-filled {
+      color: #ffd700;
+      filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.3));
+    }
+
+    .star-half {
+      position: relative;
+      color: #e0e0e0;
+
+      &::before {
+        content: "\f089"; // Unicode for the solid star
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        overflow: hidden;
+        color: #ffd700;
+      }
+    }
+
+    .star-empty {
+      color: #e0e0e0;
+    }
+  }
+
+  .review-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    text-align: center;
+  }
+
+  .reviewer-info {
+    text-align: center;
+
+    h3 {
+      margin: 0;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0.3rem 0 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.active {
+      background: #666;
+      transform: scale(1.2);
+    }
+
+    &:hover {
+      background: #999;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-carousel {
+    padding: 1rem;
+  }
+
+  .nav-button {
+    width: 32px;
+    height: 32px;
+
+    svg {
+      font-size: 1rem;
+    }
+  }
+
+  .review-card {
+    padding: 1.5rem;
+  }
+
+  .reviewer-image {
+    width: 100px;
+    height: 100px;
+  }
+}

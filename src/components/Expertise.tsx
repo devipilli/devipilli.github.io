@@ -80,10 +80,11 @@ function Expertise() {
             {/* <FontAwesomeIcon icon={faPython} size="3x"/> */}
             <h3>Research & Academic Contributions in Physiotherapy</h3>
             <p>
-              Award-winning research experience in physical fitness attributes
-              and injury prevalence studies. Published and presented research in
-              national and international conferences, focusing on
-              kinanthropometry and exercise benefits.
+              Award winning research experience in physical fitness attributes
+              and kinanthropometric measurements in Mallakhamb players.
+              Presented in SIPCON 2024 in chandigarh Published in journal of
+              Indian association of physiotherapy DOI:
+              10.4103/jsip.jsip_abstract_79
             </p>
             <div className="flex-chips">
               <span className="chip-title">Expertise stack:</span>

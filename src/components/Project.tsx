@@ -4,11 +4,7 @@ import mock02 from "../assets/images/mock02.png";
 import mock03 from "../assets/images/mock03.png";
 import mock04 from "../assets/images/mock04.png";
 import mock05 from "../assets/images/mock05.png";
-import mock06 from "../assets/images/mock06.png";
 import mock07 from "../assets/images/mock07.png";
-import mock08 from "../assets/images/mock08.png";
-import mock09 from "../assets/images/mock09.png";
-import mock10 from "../assets/images/mock10.png";
 import "../assets/styles/Project.scss";
 import img1 from "./images/mahakumb.webp";
 import img2 from "./images/type2diabetes.webp";
@@ -184,7 +180,7 @@ function Project() {
             myofascial trigger points using fine needles to relieve pain,
             improve mobility, and enhance muscle function. The technique is
             widely used in physiotherapy for managing chronic pain, sports
-            injuries, and neuromuscular conditions.
+            injuries, and musculoskeletal conditions.
           </p>
         </div>
         <div className="project">

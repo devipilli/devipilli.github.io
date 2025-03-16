@@ -96,8 +96,10 @@ function Timeline() {
               SRM Medical College Hospital and Research Center, Kattankulathur
             </h4>
             <p>
-              Provided physiotherapy treatments under supervision, assisting in
-              patient rehabilitation and therapy sessions.
+              Provided physiotherapy treatment in various departments which
+              includes Orthopedics, Neurology, Cardiorespiratory, Sports &
+              Fitness, Obstetrics, Plastic and Reconstructive surgery,
+              Paediatrics, Leprosy and teaching methodolgy under supervision.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
